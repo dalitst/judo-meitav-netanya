@@ -1,0 +1,40 @@
+<div>
+    <h1>סניפים</h1>
+    
+    <div class="container">
+        <div class="branchs" ng-controller="branchCtrl">
+            <div class="srch">
+                חפש <input type="text" ng-model="query" />
+                מיין <select ng-model="orderProp">
+                            <option value="name">סניף</option>
+                            <option value="coach">מאמן</option>
+                            <option value="address">כתובת</option>
+                            <option value="city">עיר</option>
+                     </select>
+            </div>    
+            <br>
+            <table class="table">
+                <tr>
+                    <th ng-click="sortBy('name')">סניף</th>
+                    <th>טלפון</th>
+                    <th ng-click="sortBy('coach')">מאמן</th>
+                    <th ng-click="sortBy('address')">כתובת</th>
+                    <th ng-click="sortBy('city')">עיר</th>
+                    <th>מפה</th>                    
+                </tr>
+                <tr ng-repeat="branch in branchs | filter : query | orderBy: orderProp">
+                    <td>{{branch.name}}</td>
+                    <td>{{branch.phone}}</td>
+                    <td>{{branch.coach}}</td>
+                    <td>{{branch.address}}</td>
+                    <td>{{branch.city}}</td>
+                    <td><a ng-href="{{branch.urlGoMap}}" target="_blank">
+                            <i class="material-icons">place </i>
+                        </a>
+                       
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

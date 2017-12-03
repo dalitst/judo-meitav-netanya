@@ -1,0 +1,24 @@
+[{
+    "firstName":"מאיה",
+    "lastName": "סטולר",
+    "sex":"נ",
+    "birthdate":"31-10-2008",
+    "status":"פעיל",
+    "egud": "כן"
+},
+{
+    "firstName":"ישי",
+    "lastName": "נקש",
+    "sex":"ז",
+    "birthdate":"31-03-2008",
+    "status":"פעיל",
+    "egud": "כן"
+},
+{
+    "firstName":"עדן",
+    "lastName": "שושן",
+    "sex":"נ",
+    "birthdate":"28-04-2009",
+    "status":"פעיל",
+    "egud": "לא"
+}]

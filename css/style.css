@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+body {direction:rtl; text-align:right;}
+
+.fa-facebook:hover { /* round facebook icon*/
+    background: #4060A5;
+}
+
+.jumbotron {
+    background-color: blue;
+    padding: 0;
+    height: 15em;
+}
+
+.jumbotron .container h1 {
+    text-align: center;
+    font-size: 4em;
+    color: white;
+}
+
+.prg {
+    color: white;
+    font-size: 2em;
+}
+
+
+.img-ya{
+    width:70%;
+}
+
+th {
+    text-align:right; 
+}
+
+#dt {
+    text-indent: -500px;
+    height: 25px;
+    width: 200px;
+  }

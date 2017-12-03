@@ -1,0 +1,33 @@
+[{
+    "name":"אהרון דוידי אגמים",
+    "address": "שמורת נחל שניר 3",
+    "city":"נתניה",
+    "phone":"09-7664413",
+    "coach": "שני הרשקו",
+    "urlGoMap":"https://www.google.co.il/maps/place/%D7%90%D7%94%D7%A8%D7%95%D7%9F+%D7%93%D7%95%D7%99%D7%93%D7%99%E2%80%AD/@32.2900765,34.8533843,17z/data=!3m1!4b1!4m5!3m4!1s0x151d4062cd9e4ad1:0xbe1590a9611ac915!8m2!3d32.290072!4d34.851201?hl=iw"
+},
+{
+    "name":"קולג'ים",
+    "address": "האוניברסיטה 1",
+    "city":"נתניה",
+    "phone":"09-8623692",
+    "coach":"מארט",
+    "urlGoMap":"https://www.google.co.il/maps/place/%D7%9E%D7%95%D7%A2%D7%93%D7%95%D7%9F+%D7%A1%D7%A4%D7%95%D7%A8%D7%98+%D7%A7%D7%95%D7%9C%D7%92'%D7%99%D7%9D%E2%80%AD/@32.307157,34.8802472,17z/data=!3m1!4b1!4m5!3m4!1s0x151d3feed89b2d75:0x9c0cda9b492e7ab2!8m2!3d32.3071525!4d34.8780639?hl=iw"
+},
+{
+    "name":"גנות הדר ונורדיה",
+    "address": "סמטת האדמונית",
+    "city":"נורדיה",
+    "phone":"054-2152166",
+    "coach":"מאיר חקלאי",
+    "urlGoMap":"https://www.google.co.il/maps/place/%D7%A1%D7%9E%D7%98%D7%AA+%D7%94%D7%90%D7%93%D7%9E%D7%95%D7%A0%D7%99%D7%AA,+%D7%92%D7%A0%D7%95%D7%AA+%D7%94%D7%93%D7%A8%E2%80%AD/@32.321111,34.9036022,17z/data=!3m1!4b1!4m5!3m4!1s0x151d15798b7a4e9f:0xda3c09656ad5f2c6!8m2!3d32.3211065!4d34.9014189?hl=iw"
+},
+{
+    "name":"מתנס אבן יהודה",
+    "address": "שבזי",
+    "city":"אבן יהודה",
+    "phone":"09-8910070",
+    "coach":"שני הרשקו", 
+    "urlGoMap":"https://www.google.co.il/maps/place/%D7%9E%D7%AA%D7%A0''%D7%A1+%D7%90%D7%91%D7%9F+%D7%99%D7%94%D7%95%D7%93%D7%94%E2%80%AD/@32.2800245,34.8845743,17z/data=!3m1!4b1!4m5!3m4!1s0x151d3f9fb0acbf67:0x1005b0d88f26e66d!8m2!3d32.28002!4d34.882391?hl=iw"
+}
+]

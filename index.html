@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="JudoApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-animate.js"></script>
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--UI Bootstrap-->
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--App Stuff-->
+    <script src="app/app.js"></script>
+    <script src="app/nav/navCtrl.js"></script>    
+    <script src="app/home/homeCtrl.js"></script>
+    <script src="app/login/loginCtrl.js"></script>
+    <script src="app/model/user.js"></script>
+    <script src="app/branch/branchCtrl.js"></script>
+    <script src="app/model/branch.js"></script>
+    <script src="app/model/branchs.js"></script>
+    <script src="app/model/athlete.js"></script>
+    <script src="app/athlete/athleteCtrl.js"></script>
+    <script src="app/model/event.js"></script>
+    <script src="app/model/events.js"></script>
+    <script src="app/event/eventGalleryCtrl.js"></script>
+
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>המרכז הישראלי לג'ודו</title>
+</head>
+<body ng-controller="TestCtrl" >
+    <!--ng-controller="TestCtrl"-->
+    
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img class="img-responsive" src="assets/logo.jpg" alt="logo">   
+            
+            </a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a ng-href="https://www.facebook.com/israelijudocenter" target="_blank">
+                        <i class="fa fa-lg fa-facebook"></i>
+                    <!--    <img src="assets/facebook.jpg" alt="facebook">            -->
+                    </a>
+                </li>
+                <li><a ng-href="#!/branchs">סניפים</a></li>
+                <li ng-show="isLoggedIn()"><a ng-href="#!/athletes">ספורטאים</a></li>
+                <li ng-show="isLoggedIn()"><a ng-href="#!/events">אירועים</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="חפש באתר">
+                </div>
+            </form>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-show="isLoggedIn()"><a ng-href="#"><span class="glyphicon glyphicon-log-out"></span> יציאה</a></li>
+                <li ng-hide="isLoggedIn()"><a ng-href="#!login"><span class="glyphicon glyphicon-log-in"></span> כניסה</a></li>
+              </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </nav>
+
+    
+   <ng-view></ng-view>
+
+</body>
+</html>
