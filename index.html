@@ -36,10 +36,10 @@
 
     <title>המרכז הישראלי לג'ודו</title>
 </head>
-<body ng-controller="TestCtrl" >
+<body ng-controller="TestCtrl">
     <!--ng-controller="TestCtrl"-->
     
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation" ng-controller="navCtrl">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -53,7 +53,7 @@
             
             </a>
         </div>
-    
+        
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
@@ -64,20 +64,20 @@
                     </a>
                 </li>
                 <li><a ng-href="#!/branchs">סניפים</a></li>
-                <li ng-show="isLoggedIn()"><a ng-href="#!/athletes">ספורטאים</a></li>
-                <li ng-show="isLoggedIn()"><a ng-href="#!/events">אירועים</a></li>
+                <li ng-show="isLoggedIn()"><a href="#!/athletes">ספורטאים</a></li>
+                <li ng-show="isLoggedIn()"><a href="#!/events">אירועים</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="חפש באתר">
                 </div>
             </form>
-
+    
             <ul class="nav navbar-nav navbar-right">
                 <li ng-show="isLoggedIn()"><a ng-href="#"><span class="glyphicon glyphicon-log-out"></span> יציאה</a></li>
                 <li ng-hide="isLoggedIn()"><a ng-href="#!login"><span class="glyphicon glyphicon-log-in"></span> כניסה</a></li>
               </ul>
-
+    
         </div><!-- /.navbar-collapse -->
     </nav>
 

@@ -13,25 +13,22 @@ JudoApp.controller("eventGalleryCtrl", function($scope, $http, $log, events) {
     } else {
           $scope.events = events.getAll();
     }
+
+    $scope.fromDate = new Date("2017-09-01");
+    $scope.toDate = new Date();
+
+    $scope.isMoreThanOneDay=function(event){
+      if (event.fromDate !== event.toDate) {
+        return true;
+      }else{
+        return false;
+      }
+    };
+
   
         $scope.sortBy = function(prop) {
           $scope.orderProp = prop;
         }
         
-function mydate() {
-    alert("123");
-    document.getElementById("dt").hidden = false;
-    document.getElementById("ndt").hidden = true;
-  }
-  
-  function mydate1() {
-    d = new Date(document.getElementById("dt").value);
-    dt = d.getDate();
-    mn = d.getMonth();
-    mn++;
-    yy = d.getFullYear();
-    document.getElementById("ndt").value = dt + "/" + mn + "/" + yy
-    document.getElementById("ndt").hidden = false;
-    document.getElementById("dt").hidden = true;
-  }
+        
 })

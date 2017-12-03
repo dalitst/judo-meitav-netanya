@@ -1,5 +1,7 @@
 
 JudoApp.controller("branchCtrl", function($scope, $http, $log, branchs) {
+  $scope.branchs = [];
+  
   if (branchs.getAll().length === 0) {
     $scope.branchs = [];
     $http.get("app/data/branch.json").then(function mySuccess(response) {

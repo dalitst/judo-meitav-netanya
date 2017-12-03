@@ -1,19 +1,15 @@
 <div class="container">
-        <div class="events" ng-controller="eventGalleryCtrl">
+        <div class="events">
             <div class="event_head">
             <h1>ארועים בג'ודו</h1>
-            <input type="date" id="dt" onchange="mydate1();" hidden/>
-            <input type="text" id="ndt"  onclick="mydate();" hidden />
-            <input type="button" Value="מתאריך" onclick="mydate();" />
-            <input type="date" id="dt" onchange="mydate1();" hidden/>
-            <input type="text" id="ndt"  onclick="mydate();" hidden />
-            <input type="button" Value="עד תאריך" onclick="mydate();" />
+            מתאריך <input type="date" class="datef" ng-model="fromDate" />
+            עד תאריך <input type="date" class="datef" ng-model="toDate"/>
             חפש <input type="text" ng-model="query.name" />
             מיין <select ng-model="orderProp">
                         <option value="name">ארוע</option>
                         <option value="city">עיר</option>
-                        <option value="day">יום</option>
-                        <option value="date">תאריך</option>
+                        <option value="address">כתובת</option>
+                        <option value="fromDate">תאריך</option>
                       </select>
             </div>
             <br>
@@ -21,10 +17,11 @@
             <div class="row">
                 <div class = "event col-xs-12 col-sm-4 col-md-4 col-lg-4"  ng-repeat="event in events  | filter : query | orderBy: orderProp">
                 <div class="well">
-                <h3>{{name}}</h3>
-                <p>{{city}}</p>
-                <p>{{day}}</p>
-                <p>{{fromDate}}</p>
+                <h3>{{event.name}}</h3>
+                <p>{{event.city}}</p>
+                <p>יום: {{event.day}}</p>
+                <p>מתאריך: {{event.fromDate}}</p>
+                <p ng-show="isMoreThanOneDay(event)">{{event.toDate}}</p>
                 </div>
                 </div>
             </div>

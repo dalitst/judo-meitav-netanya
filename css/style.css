@@ -30,7 +30,7 @@ body {direction:rtl; text-align:right;}
     width:70%;
 }
 
-th {
+th, .datef, .event {
     text-align:right; 
 }
 
@@ -39,3 +39,4 @@ th {
     height: 25px;
     width: 200px;
   }
+

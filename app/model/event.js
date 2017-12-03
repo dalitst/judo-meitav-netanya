@@ -1,5 +1,5 @@
 JudoApp.factory("Event", function(){
-    function Event(name, location, address, city, fromDate, to_date, day, type, status) {
+    function Event(name, location, address, city, fromDate, toDate, day, type, status) {
         this.name = name;
         this.location = location;
         this.address = address;
