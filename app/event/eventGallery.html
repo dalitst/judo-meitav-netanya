@@ -10,13 +10,16 @@
                         <option value="city">עיר</option>
                         <option value="address">כתובת</option>
                         <option value="fromDate">תאריך</option>
-                      </select>
+                    </select>
+                          
+            <button type="button" class="btn btn-success" ng-click="create()">הוסף אירוע</button>
             </div>
+            
             <br>
     
             <div class="row">
                 <div class = "event col-xs-12 col-sm-4 col-md-4 col-lg-4"  ng-repeat="event in events  | filter : query | orderBy: orderProp">
-                <div class="well">
+                <div class="well event-item" ng-click="openDetails($index)">
                 <h3>{{event.name}}</h3>
                 <p>{{event.city}}</p>
                 <p>יום: {{event.day}}</p>
