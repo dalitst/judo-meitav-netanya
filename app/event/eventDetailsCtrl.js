@@ -9,6 +9,10 @@ JudoApp.controller("eventDetailsCtrl", function ($scope, $location, events, acti
         // Creating a copy of the event object so changes won't be reflected on the array
         $scope.event = new Event(events.getEventById($routeParams.eventIndex));
         console.log($scope.event);
+
+        $scope.isManager = function(){
+            return activeUser.get().role === "Manager" ? true : false;
+          }
     
         $scope.cancel = function() {
             $location.path("/events");

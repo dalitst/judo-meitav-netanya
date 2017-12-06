@@ -5,7 +5,7 @@ JudoApp.factory("User", function(){
         this.password = plainObject.password;
         this.firstName = plainObject.firstName;
         this.lastName = plainObject.lastName;
-        //this.roll     = plainObject.roll;
+        this.role     = plainObject.role;
     };
 
     return User;
@@ -19,22 +19,20 @@ JudoApp.factory("activeUser", function(User){
         return user ? true : false;
     };
 
-    var isManagerIn = function() {
-        if(user.manager === "yes"){
+    var isManager = function() {
+        if(user.role === "Manager"){
             return true;
         } else {
             return false;
         }
-        return user ? true : false;
     };
 
-    var isAthleteIn = function() {
-        if(user.athlete === "yes"){
+    var isAthlete = function() {
+        if(user.role === "Athlete"){
             return true;
         } else {
             return false;
         }
-        return user ? true : false;
     };
 
     var login = function(loggedInUser) {
@@ -53,6 +51,8 @@ JudoApp.factory("activeUser", function(User){
         isLoggedIn: isLoggedIn,
         login: login,
         logout: logout,
-        get: get
+        get: get,
+        isManager: isManager,
+        isAthlete: isAthlete
     };   
 });

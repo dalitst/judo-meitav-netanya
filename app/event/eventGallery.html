@@ -12,14 +12,14 @@
                         <option value="fromDate">תאריך</option>
                     </select>
             
-            <button type="button" class="btn btn-success btn-cre" ng-click="openNew()" >הוסף אירוע</button>
+            <button ng-show="isManager()" type="button" class="btn btn-success btn-cre" ng-click="openNew()" >הוסף אירוע</button>
             </div>
             </div>
             <br>
     
             <div class="row">
-                <div class = "event col-xs-12 col-sm-4 col-md-4 col-lg-4"  ng-repeat="event in events  | filter : query | orderBy: orderProp">
-                <div class="well well-event" ng-click="openDetails($index)">
+                <div class = "event col-xs-12 col-sm-4 col-md-4 col-lg-4"  ng-repeat="event in events  | filter : filterByNameAndDates | orderBy: orderProp">
+                <div class="well well-event" ng-click="openDetails(event)">
                 <h3>{{event.name}}</h3>
                 <p>{{event.city}}</p>
                 <p>יום: {{event.day}}</p>
