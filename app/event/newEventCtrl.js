@@ -14,7 +14,7 @@ JudoApp.controller("NewEventCtrl", function ($scope, $location, events, activeUs
         }
     
         $scope.create = function () {
-            events.add($scope.event);
+            events.addEvent($scope.event);
             $location.path("/events");
         }
     });

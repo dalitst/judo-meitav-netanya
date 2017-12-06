@@ -27,12 +27,18 @@ JudoApp.factory("events", function(Event) {
 
     var setEvents = function (eventsPlain) {
         for (var i = 0; i < eventsPlain.length; i++) {
-            events.push(new Event(eventsPlain[i].name, eventsPlain[i].location,
-                eventsPlain[i].address, eventsPlain[i].city, 
-                eventsPlain[i].fromDate, eventsPlain[i].toDate,
-                eventsPlain[i].day, eventsPlain[i].type, eventsPlain[i].status))
+               events.push(new Event(eventsPlain[i]))
         }
     }
+
+    // var setEvents = function (eventsPlain) {
+    //     for (var i = 0; i < eventsPlain.length; i++) {
+    //            events.push(new Event(eventsPlain[i].name, eventsPlain[i].location,
+    //            eventsPlain[i].address, eventsPlain[i].city, 
+    //            eventsPlain[i].fromDate, eventsPlain[i].toDate,
+    //            eventsPlain[i].day, eventsPlain[i].type, eventsPlain[i].status))
+    //     }
+    // }
 
     return {
         getAll: getAll,

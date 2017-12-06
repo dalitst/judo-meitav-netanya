@@ -33,22 +33,22 @@ JudoApp.config(function($routeProvider) {
    })
 })
 
-    JudoApp.controller("TestCtrl", function ($scope, User, activeUser, Branch, branchs) {
-        var plainUser = {
-            "email": "nir@nir.com",
-            "password": "nir123",
-            "firstName": "Nir",
-            "lastName": "Channes",
-        }
+    // JudoApp.controller("TestCtrl", function ($scope, User, activeUser, Branch, branchs) {
+    //     var plainUser = {
+    //         "email": "nir@nir.com",
+    //         "password": "nir123",
+    //         "firstName": "Nir",
+    //         "lastName": "Channes",
+    //     }
 
-        var user = new User(plainUser);
-        console.log(JSON.stringify(user));
-        console.log(activeUser.isLoggedIn());
-        activeUser.login(user);
-        console.log(JSON.stringify(activeUser.get()));
-        console.log(activeUser.isLoggedIn());
-        activeUser.logout();
-        console.log(activeUser.isLoggedIn());
+    //     var user = new User(plainUser);
+    //     console.log(JSON.stringify(user));
+    //     console.log(activeUser.isLoggedIn());
+    //     activeUser.login(user);
+    //     console.log(JSON.stringify(activeUser.get()));
+    //     console.log(activeUser.isLoggedIn());
+    //     activeUser.logout();
+    //     console.log(activeUser.isLoggedIn());
 
 //  JudoApp.controller("TestCtrl", function($scope, $http, $log, branchs) {
 //      var branchsPlain = [{
@@ -71,31 +71,31 @@ JudoApp.config(function($routeProvider) {
 //      branchs.setBranchs(branchsPlain);
 //      console.log(branchs.getAll());
 
-    // JudoApp.controller("TestCtrl",  function($scope, $http, $log, events) {
-    //     var eventsPlain = [{
-    //         "name":"גביע האיגוד - מס' 2",
-    //         "city":"רעננה",
-    //         "day":"ש",
-    //         "fromDate":"24-11-2017",
-    //         "toDate":"24-11-2017"
-    //     },
-    //     {
-    //         "name":"טורניר החורף בג'ודו",
-    //         "city":"פרדסיה",
-    //         "day":"ו",
-    //         "fromDate":"15-12-2017",
-    //         "toDate":"15-12-2017"
-    //     },
-    //     {
-    //         "name":"פסטיבל הג'ודו",
-    //         "city":"אילת",
-    //         "day":"ד-ש",
-    //         "fromDate":"17-01-2018",
-    //         "toDate":"20-01-2018"
-    //     }] 
+    JudoApp.controller("TestCtrl",  function($scope, $http, $log, events) {
+         var eventsPlain = [{
+             "name":"גביע האיגוד - מס' 2",
+             "city":"רעננה",
+             "day":"ש",
+             "fromDate":"24-11-2017",
+             "toDate":"24-11-2017"
+         },
+         {
+             "name":"טורניר החורף בג'ודו",
+             "city":"פרדסיה",
+             "day":"ו",
+             "fromDate":"15-12-2017",
+             "toDate":"15-12-2017"
+         },
+         {
+             "name":"פסטיבל הג'ודו",
+             "city":"אילת",
+             "day":"ד-ש",
+             "fromDate":"17-01-2018",
+             "toDate":"20-01-2018"
+          }] 
 
-    //         events.setEvents(eventsPlain);
-    //         console.log(events.getAll());
+             //events.setEvents(eventsPlain);
+             //console.log(events.getAll());
 
     // JudoApp.controller("TestCtrl",  function($scope, $http, $log, athletes) {
     //     var athletesPlain = [{

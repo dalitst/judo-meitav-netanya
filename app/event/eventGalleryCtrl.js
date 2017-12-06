@@ -46,6 +46,7 @@ JudoApp.controller("eventGalleryCtrl", function($scope, $http, events, $location
     $scope.openNew = function() {
       $location.path("/new")
     }
+    
     $scope.filterByDateRange = function(event) {
       var currentfromDate = new Date(event.fromDate);
       var currenttoDate = new Date(event.todate);
