@@ -2,29 +2,29 @@
         <div class="events">
             <div class="event_head">
             <h1>ארועים בג'ודו</h1>
+            <div class="qrow">
             מתאריך <input type="date" class="datef" ng-model="fromDate" />
             עד תאריך <input type="date" class="datef" ng-model="toDate"/>
             חפש <input type="text" ng-model="query.name" />
             מיין <select ng-model="orderProp">
                         <option value="name">ארוע</option>
                         <option value="city">עיר</option>
-                        <option value="address">כתובת</option>
                         <option value="fromDate">תאריך</option>
                     </select>
-                          
-            <button type="button" class="btn btn-success" ng-click="create()">הוסף אירוע</button>
-            </div>
             
+            <button type="button" class="btn btn-success btn-cre" ng-click="openNew()" >הוסף אירוע</button>
+            </div>
+            </div>
             <br>
     
             <div class="row">
                 <div class = "event col-xs-12 col-sm-4 col-md-4 col-lg-4"  ng-repeat="event in events  | filter : query | orderBy: orderProp">
-                <div class="well event-item" ng-click="openDetails($index)">
+                <div class="well well-event" ng-click="openDetails($index)">
                 <h3>{{event.name}}</h3>
                 <p>{{event.city}}</p>
                 <p>יום: {{event.day}}</p>
                 <p>מתאריך: {{event.fromDate}}</p>
-                <p ng-show="isMoreThanOneDay(event)">{{event.toDate}}</p>
+                <p ng-show="isMoreThanOneDay(event)">עד תאריך: {{event.toDate}}</p>
                 </div>
                 </div>
             </div>

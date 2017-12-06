@@ -21,6 +21,10 @@ JudoApp.config(function($routeProvider) {
     templateUrl: "app/event/eventDetails.html",
     controller: "eventDetailsCtrl"
    })
+   .when("/new", {
+    templateUrl: "app/event/newEvent.html",
+    controller: "NewEventCtrl"            
+   })
    .when("/athletes",{
     templateUrl: "app/athlete/athlete.html"
    })

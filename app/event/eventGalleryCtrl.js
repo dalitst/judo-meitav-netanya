@@ -42,6 +42,20 @@ JudoApp.controller("eventGalleryCtrl", function($scope, $http, events, $location
     $scope.openDetails = function(index) {
       $location.path("/events/" + index)
     }
-        
-        
+     
+    $scope.openNew = function() {
+      $location.path("/new")
+    }
+    $scope.filterByDateRange = function(event) {
+      var currentfromDate = new Date(event.fromDate);
+      var currenttoDate = new Date(event.todate);
+      
+      if ((currentfromDate <= $scope.toDate && currentfromDate >= $scope.fromDate) &&
+         (currenttoDate <= $scope.toDate && currenttoDate >= $scope.fromDate)) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    
 })
