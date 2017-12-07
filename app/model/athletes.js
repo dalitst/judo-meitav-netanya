@@ -27,8 +27,7 @@ JudoApp.factory("athletes", function(Athlete) {
 
     var setAthletes = function (athletesPlain) {
         for (var i = 0; i < athletesPlain.length; i++) {
-            athletes.push(new Athlete(athletesPlain[i].name, athletesPlain[i].city, 
-                athletesPlain[i].day, athletesPlain[i].from_date, athletesPlain[i].to_date))
+            athletes.push(new Athlete(athletesPlain[i]))
         }
     }
 

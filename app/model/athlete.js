@@ -1,11 +1,11 @@
 JudoApp.factory("Athlete", function(){
-    function Athlete(firstName, lastName, sex, birthdate, status, egud) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.sex = sex;
-        this.birthdate = birthdate;        
-        this.status = status;
-        this.egud = egud;
+    function Athlete(plainObject) {
+        this.firstName = plainObject.firstName;
+        this.lastName = plainObject.lastName;
+        this.sex = plainObject.sex;
+        this.birthdate = plainObject.birthdate;        
+        this.status = plainObject.status;
+        this.egud = plainObject.egud;
     };
 
     return Athlete;

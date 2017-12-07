@@ -28,7 +28,7 @@ JudoApp.controller("eventGalleryCtrl", function ($scope, $http, events, $locatio
   }
 
   $scope.fromDate = new Date("2017-09-01");
-  $scope.toDate = new Date();
+  $scope.toDate = new Date("2018-06-31");
 
   $scope.isMoreThanOneDay = function (event) {
     if (event.fromDate !== event.toDate) {
@@ -39,8 +39,15 @@ JudoApp.controller("eventGalleryCtrl", function ($scope, $http, events, $locatio
   };
 
   $scope.isManager = function(){
-    return activeUser.get().role === "Manager" ? true : false;
-  }
+    //return activeUser.get().role === "Manager" ? true : false;
+    if (activeUser.get() && activeUser.get().role==="Manager")
+    {
+      return true;
+    } 
+    else{
+          return false;
+        }
+}
 
   $scope.sortBy = function (prop) {
     $scope.orderProp = prop;

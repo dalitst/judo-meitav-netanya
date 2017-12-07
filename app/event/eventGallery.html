@@ -23,8 +23,8 @@
                 <h3>{{event.name}}</h3>
                 <p>{{event.city}}</p>
                 <p>יום: {{event.day}}</p>
-                <p>מתאריך: {{event.fromDate}}</p>
-                <p ng-show="isMoreThanOneDay(event)">עד תאריך: {{event.toDate}}</p>
+                <p>מתאריך: {{event.fromDate | date : "dd/MM/yyyy"}} </p>
+                <p ng-show="isMoreThanOneDay(event)">עד תאריך: {{event.toDate | date : "dd/MM/yyyy"}} </p>
                 </div>
                 </div>
             </div>

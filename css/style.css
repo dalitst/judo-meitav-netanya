@@ -21,6 +21,14 @@ body {direction:rtl; text-align:right;}
     font-size: 2em;
 }
 
+.well-main1,.well-main2{
+    height: 40em;
+}
+
+.img-ya{
+    width:90%;
+}
+
 @media screen and (max-width:400px){
     .navb{
         padding:0;
@@ -43,19 +51,18 @@ body {direction:rtl; text-align:right;}
     .cont{
         text-align: center;
     }
+
+    .well-main1 {
+        height: 20em;
+    }
 }
 
-.img-ya{
-    width:90%;
-}
 
 .prg-main{
     font-size: 1.4em;
 }
 
-.well-main{
-    height: 40em;
-}
+
 
 th, .datef, .event {
     text-align:right; 

@@ -1,4 +1,4 @@
-JudoApp.controller("navCtrl", function ($scope, activeUser) {
+JudoApp.controller("navCtrl", function ($scope, activeUser, $location) {
     
     //$scope.isLoggedIn = activeUser.isLoggedIn();
     
@@ -6,4 +6,9 @@ JudoApp.controller("navCtrl", function ($scope, activeUser) {
     $scope.isLoggedIn = function() {
         return activeUser.isLoggedIn();
     };
+
+    $scope.logout = function() {
+        activeUser.logout();
+        $location.path("/");
+    }
 });

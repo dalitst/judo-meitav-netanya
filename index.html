@@ -66,17 +66,17 @@
                     </a>
                 </li>
                 <li><a ng-href="#!/branchs">סניפים</a></li>
-                <li ng-show="isLoggedIn()"><a href="#!/athletes">ספורטאים</a></li>
+                <!-- <li ng-show="isLoggedIn()"><a href="#!/athletes">ספורטאים</a></li> -->
                 <li ng-show="isLoggedIn()"><a href="#!/events">אירועים</a></li>
             </ul>
-            <form class="navbar-form navbar-left" role="search">
+            <!-- <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="חפש באתר">
                 </div>
-            </form>
+            </form> -->
     
             <ul class="nav navbar-nav navbar-right">
-                <li ng-show="isLoggedIn()"><a ng-href="#"><span class="glyphicon glyphicon-log-out"></span> יציאה</a></li>
+                <li ng-show="isLoggedIn()"><a ng-href="#" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> יציאה</a></li>
                 <li ng-hide="isLoggedIn()"><a ng-href="#!login"><span class="glyphicon glyphicon-log-in"></span> כניסה</a></li>
               </ul>
     

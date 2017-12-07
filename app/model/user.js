@@ -20,7 +20,7 @@ JudoApp.factory("activeUser", function(User){
     };
 
     var isManager = function() {
-        if(user.role === "Manager"){
+        if(isLoggedIn() && user.role === "Manager"){
             return true;
         } else {
             return false;
@@ -28,7 +28,7 @@ JudoApp.factory("activeUser", function(User){
     };
 
     var isAthlete = function() {
-        if(user.role === "Athlete"){
+        if(isLoggedIn() && user.role === "Athlete"){
             return true;
         } else {
             return false;
